@@ -19,6 +19,9 @@ const MAX_QUANTITY = process.env.MAX_QUANTITY || 10;
 const find = async (term, maxQuantity=MAX_QUANTITY) => {
     // TODO: retorna resultado sem fazer await
     const { items=[] } = await youtubeSearch(term, { limit: maxQuantity });
+
+    console.log({ items });
+    
     return items.map( item => ({
         title:item.title, 
         description:item.description, 

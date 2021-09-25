@@ -1,5 +1,6 @@
 const searchService = require("../services/search");
 const validateViewer = require("../services/validateViewer");
+const  topRatingWords = require("../services/topRatingWords");
 
 const defaultResponse = (data=[], statusCode = 500) => ({
     data,
@@ -37,8 +38,15 @@ const find = async (term, weeklyTime) => {
     if(result.error){
         return defaultResponse();
     }
+    
+    const tileDescriptions = result.map(videos =>({ title: videos.title,  description: videos.description, }));
 
-    return defaultResponse(result, 200);
+    const response = {
+        topWord: topRatingWords.getTopWords(tileDescriptions),
+        result
+    }
+
+    return defaultResponse(response, 200);
 }
 
 

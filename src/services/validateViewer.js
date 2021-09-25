@@ -17,3 +17,5 @@
  * ○ Apenas os primeiros 200 vídeos devem ser considerados.
  */
 
+//seg,  ter,    qua,    qui,    sex,    sab,    dom
+//[15,  120,    30,     150,    20,     40,     90]
