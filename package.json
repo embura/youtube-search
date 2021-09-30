@@ -1,18 +1,23 @@
 {
-  "name": "search-tube",
+  "name": "youtube-search",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "DEBUG=* npm start"
+    "dev": "DEBUG=* npm start",
+    "test": "jest --collect-coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^10.0.0",
     "express": "4.17.1",
+    "moment": "^2.29.1",
     "ytsr": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.2.2"
   }
 }
