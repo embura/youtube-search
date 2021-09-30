@@ -1,6 +1,6 @@
 const searchService = require("../services/searchService");
 const { createSchedule } = require("../services/viewerScheduleService");
-const  topRatingWords = require("../services/topRatingWordsService");
+const  wordIndexerService = require("../services/wordIndexerService");
 
 const defaultResponse = (data="", statusCode = 500) => ({
     data,
@@ -53,7 +53,7 @@ const find = async (term, weeklyTime, maxAmountOfVideos = process.env.MAX_QUANTI
     const daysTotal = days.length;
 
     const response = {
-        topWord: topRatingWords.getTopWords(titleDescriptions),
+        topWord: wordIndexerService.getTopWords(titleDescriptions),
         daysTotal,
         days,
     }
