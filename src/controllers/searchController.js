@@ -1,6 +1,6 @@
 const searchService = require("../services/searchService");
 const { createSchedule } = require("../services/viewerScheduleService");
-const  wordIndexerService = require("../services/wordIndexerService");
+const  wordIndexerService = require("../services/indexerService");
 
 const defaultResponse = (data="", statusCode = 500) => ({
     data,
