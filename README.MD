@@ -1,6 +1,5 @@
-
 # Projeto
-    Busca vídeos no youtube a partir de um termo escolhi e distribui conforme disponibilidade diário do visualizador.
+Busca vídeos no youtube a partir de um termo escolhi e distribui conforme disponibilidade diário do visualizador.
 
 
   - System:
